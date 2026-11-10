@@ -1,0 +1,35 @@
+/* Color tokens and base styles. Page layout lives in page.module.css. */
+:root {
+  --bg: #f3f1ea;        /* natural paper */
+  --ink: #13233a;       /* dark navy, 14:1 on bg */
+  --muted: #4b5563;     /* 6.7:1 on bg, 6:1 on the sage end of the gradient */
+  --line: #d6d3c7;
+  --accent: #3b5a2b;    /* forest/olive green, 6.9:1 on bg */
+  /* Faustina runs a little tight by default; open it up slightly */
+  --track-text: 0.015em;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c1626;      /* deep navy */
+    --ink: #ecefe8;     /* 15.6:1 on bg */
+    --muted: #a7b1bf;   /* 8.4:1 on bg */
+    --line: #26354f;
+    --accent: #a9c48c;  /* sage/olive, 9.5:1 on bg */
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif), Georgia, serif;
+  line-height: 1.6;
+  letter-spacing: var(--track-text);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p, ul, ol { margin: 0; }
+a { color: inherit; }
