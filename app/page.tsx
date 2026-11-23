@@ -23,7 +23,7 @@ function List({ label, items }: { label: string; items: Item[] }) {
           <li key={it.key} className={s.item}>
             <div className={s.itemHead}>
               {it.url ? (
-                <a className={s.title} href={it.url} target="_blank" rel="noreferrer">
+                <a className={s.title} href={it.url} target="_blank" rel="noopener">
                   {it.title} <span aria-hidden="true">↗</span>
                 </a>
               ) : (
@@ -82,7 +82,7 @@ export default function Calm() {
           {live.length > 0 && (
             <p className={s.links}>
               {live.map((l) => (
-                <a key={l.label} href={l.url!} target="_blank" rel="noreferrer">{l.label} ↗</a>
+                <a key={l.label} href={l.url!} target="_blank" rel="noopener">{l.label} ↗</a>
               ))}
             </p>
           )}
